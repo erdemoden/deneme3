@@ -7,16 +7,104 @@
 //
 
 import UIKit
+import CoreData
 
-class tablevc: UIViewController {
+class tablevc: UIViewController ,UITableViewDelegate,UITableViewDataSource ,UIApplicationDelegate{
+    var arrname = [String]()
+    var arrid = [UUID]()
+    @IBOutlet weak var tableview: UITableView!
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell()
+        cell.textLabel?.text = arrname[indexPath.row]
+        return cell
+        
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrname.count
+       }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        arrname.removeAll(keepingCapacity: false)
+        arrid.removeAll(keepingCapacity: false)
+        ekle()
+        tableview.delegate = self
+        tableview.dataSource = self
+        
     }
-    
-
+    func ekle(){
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appdelegate.persistentContainer.viewContext
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        do{
+            let sorgu = try context.fetch(fetch)
+            for  fetches in sorgu as! [NSManagedObject]{
+                arrname.append(fetches.value(forKeyPath: "isim") as! String)
+                arrid.append(fetches.value(forKey: "id") as! UUID)
+            }
+               }
+               catch{
+                   print("Error")
+               }
+    }
+    func cikar(){
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appdelegate.persistentContainer.viewContext
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        fetch.returnsObjectsAsFaults = false
+        do{
+            let sorgu = try context.fetch(fetch)
+            for  fetches in sorgu as! [NSManagedObject]{
+                context.delete(fetches)
+                }
+            do{
+                try context.save()
+                
+            }
+            catch{
+                print("Error")
+            }
+            
+               }
+               catch{
+                   print("Error")
+               }
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            let appdelegate = UIApplication.shared.delegate as! AppDelegate
+                   let context = appdelegate.persistentContainer.viewContext
+                   let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+             fetch .returnsObjectsAsFaults = false
+            fetch.predicate = NSPredicate(format: "id = %@", arrid[indexPath.row].uuidString)
+            do{
+                 let sorgu = try context.fetch(fetch)
+                if(sorgu.count>0){
+                for fetches in sorgu as! [NSManagedObject]{
+                        context.delete(fetches)
+                        arrname.remove(at: indexPath.row)
+                        arrid.remove(at: indexPath.row)
+                    
+                    }}
+                do{
+                    try context.save()
+                    tableView.reloadData()
+                    
+                }
+                catch{
+                    print("Error")
+                }
+            }
+            catch{
+                print("Error")
+            }
+        
+        }
+    }
     /*
     // MARK: - Navigation
 

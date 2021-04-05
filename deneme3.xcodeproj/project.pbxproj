@@ -16,6 +16,8 @@
 		1954AA8C25E448E900EFFC25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1954AA8A25E448E900EFFC25 /* LaunchScreen.storyboard */; };
 		1954AA9725E448E900EFFC25 /* deneme3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1954AA9625E448E900EFFC25 /* deneme3Tests.swift */; };
 		1954AAA225E448E900EFFC25 /* deneme3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1954AAA125E448E900EFFC25 /* deneme3UITests.swift */; };
+		197DD13625E510C90097AF8D /* tablevc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197DD13525E510C90097AF8D /* tablevc.swift */; };
+		19DF4D0C25E6E05000F15AE5 /* denemeler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF4D0B25E6E05000F15AE5 /* denemeler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		1954AA9D25E448E900EFFC25 /* deneme3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deneme3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1954AAA125E448E900EFFC25 /* deneme3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deneme3UITests.swift; sourceTree = "<group>"; };
 		1954AAA325E448E900EFFC25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		197DD13525E510C90097AF8D /* tablevc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tablevc.swift; sourceTree = "<group>"; };
+		19DF4D0B25E6E05000F15AE5 /* denemeler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = denemeler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				1954AA7E25E448E700EFFC25 /* SceneDelegate.swift */,
 				1954AA8025E448E700EFFC25 /* ViewController.swift */,
 				1954AA8225E448E700EFFC25 /* Main.storyboard */,
+				19DF4D0B25E6E05000F15AE5 /* denemeler.swift */,
+				197DD13525E510C90097AF8D /* tablevc.swift */,
 				1954AA8825E448E900EFFC25 /* Assets.xcassets */,
 				1954AA8A25E448E900EFFC25 /* LaunchScreen.storyboard */,
 				1954AA8D25E448E900EFFC25 /* Info.plist */,
@@ -265,7 +271,9 @@
 				1954AA8125E448E700EFFC25 /* ViewController.swift in Sources */,
 				1954AA8725E448E700EFFC25 /* deneme3.xcdatamodeld in Sources */,
 				1954AA7D25E448E700EFFC25 /* AppDelegate.swift in Sources */,
+				19DF4D0C25E6E05000F15AE5 /* denemeler.swift in Sources */,
 				1954AA7F25E448E700EFFC25 /* SceneDelegate.swift in Sources */,
+				197DD13625E510C90097AF8D /* tablevc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XH8ZCD8UH;
 				INFOPLIST_FILE = deneme3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XH8ZCD8UH;
 				INFOPLIST_FILE = deneme3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
