@@ -24,6 +24,6 @@ Diğer sayfa da girdiğiniz değeri alt kısım da görebilirsiniz. timer başla
 
 durdurabilirsiniz ve resim seç ile galeriden resim seçip o resimi dokunarak hareket ettirebilirsiniz
 
-NOT( Açılan ilk sayfa da düzen constraintslerle değil programlayarak swift ile yapılmıştır ve deneme 3 uygulaması 
+NOT( Açılan ilk sayfa da düzen responsive tasarım constraintslerle değil programlayarak swift ile yapılmıştır ve deneme 3 uygulaması 
 
-telefonu yatay tutarak kullanmaya da uygundur test edebilirsiniz)
+telefonu yatay tutarak kullanmaya da uygundur test edebilirsiniz. Sadece tableview olan ve timer ın olduğu bölümlerde constrait kullanılmıştır)
