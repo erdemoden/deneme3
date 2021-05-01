@@ -23,3 +23,7 @@ değeri girip diğer sayfaya bastıktan sonra sizi diğer sayfaya gönderecektir
 Diğer sayfa da girdiğiniz değeri alt kısım da görebilirsiniz. timer başlat butonu ile timer başlatıp 
 
 durdurabilirsiniz ve resim seç ile galeriden resim seçip o resimi dokunarak hareket ettirebilirsiniz
+
+NOT( Açılan ilk sayfa da düzen constraintslerle değil programlayarak swift ile yapılmıştır ve deneme 3 uygulaması 
+
+telefonu yatay tutarak kullanmaya da uygundur test edebilirsiniz)
