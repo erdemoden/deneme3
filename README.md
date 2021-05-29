@@ -26,4 +26,4 @@ durdurabilirsiniz ve resim seç ile galeriden resim seçip o resimi dokunarak ha
 
 NOT( Açılan ilk sayfa da düzen responsive tasarım constraintslerle değil programlayarak swift ile yapılmıştır ve deneme 3 uygulaması 
 
-telefonu yatay tutarak kullanmaya da uygundur test edebilirsiniz. Sadece tableview olan ve timer ın olduğu bölümlerde constrait kullanılmıştır)
+telefonu yatay tutarak kullanmaya da uygundur test edebilirsiniz. Sadece tableview olan ve timer ın olduğu bölümlerde constrait kullanılmıştır ve eğer ekranınız yeterince büyük değilse eklediğim scrollview ile sayfayı aşağı kaydırıp gözükmeyen buton ya da labelları görebilirsiniz)
