@@ -57,6 +57,9 @@ class ViewController: UIViewController , UIApplicationDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(kapat));
+        view.isUserInteractionEnabled = true;
+        view.addGestureRecognizer(gesture);
         let height = view.frame.size.height
         let width = view.frame.size.width
         isimlbl.frame = CGRect(x: (width/2)-50 , y: (height*20)/100-30, width: 100, height: 30)
@@ -106,6 +109,10 @@ class ViewController: UIViewController , UIApplicationDelegate {
             let gidis = segue.destination as! denemeler
             gidis.Gelecekyazi = gonder
         }
+    }
+    
+    @objc func kapat(){
+        self.view.endEditing(true);
     }
     
 }
